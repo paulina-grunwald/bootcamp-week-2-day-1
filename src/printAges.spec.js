@@ -1,26 +1,28 @@
 const assert = require("assert")
-const { data: users1, getUserBirthDate: getBirthday1 } = require("./data/users")
-const { data: users2, getUserBirthDate: getBirthday2 } = require("./data/users2")
+const { data: users1 } = require("./data/users")
+const { data: users2 } = require("./data/users2")
 const { printAges } = require("./printAges")
 
-
-function check([ava, james, danielle, darnell]) {
-    it('should say "Ava is 27 years old."', () => {
-        assert.equal(ava, "Ava is 27 years old.")
-    })
-    it('should say "James is 33 years old."', () => {
-        assert.equal(james, "James is 33 years old.")
-    })
-    it('should say "Danielle is 30 years old."', () => {
-        assert.equal(danielle, "Danielle is 30 years old.")
-    })
-    it('should say "Darnell is 35 years old."', () => {
-        assert.equal(darnell, "Darnell is 35 years old.")
-    })
+function check(output) {
+  output.forEach(line => {
+    if (line.startsWith("Ava")) {
+      it('should say "Ava is 27 years old."', () =>
+        assert.equal(line, "Ava is 27 years old."))
+    } else if (line.startsWith("James")) {
+      it('should say "James is 33 years old."', () =>
+        assert.equal(line, "James is 33 years old."))
+    } else if (line.startsWith("Danielle")) {
+      it('should say "Danielle is 30 years old."', () =>
+        assert.equal(line, "Danielle is 30 years old."))
+    } else if (line.startsWith("Darnell")) {
+      it('should say "Darnell is 35 years old."', () =>
+        assert.equal(line, "Darnell is 35 years old."))
+    } else {
+      it('should have a name we know', () =>
+        assert.fail(`String started with unexpected name, but was: ${line}`))
+    }
+  })
 }
-describe("printAges user data 1", function() {
-    check(printAges(users1, getBirthday1))
-})
-describe("printAges user data 2", function() {
-    check(printAges(users2, getBirthday2))
+describe("printAges", function() {
+  check(printAges(users1.concat(users2)))
 })
