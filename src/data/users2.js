@@ -16,3 +16,5 @@ module.exports.data = [
     birthday: 393552000000
   }
 ]
+
+module.exports.getUserBirthDate = function(user) {}

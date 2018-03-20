@@ -16,3 +16,5 @@ module.exports.data = [
     dateOfBirth: "1982-06-22"
   }
 ]
+
+module.exports.getUserBirthDate = function(user) {}
