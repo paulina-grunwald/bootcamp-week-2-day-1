@@ -1,22 +1,14 @@
-module.exports.data = [
-  {
-    name: "Ava",
-    birthday: 638928000000
-  },
-  {
-    name: "James",
-    birthday: 476496000000
-  },
-  {
-    name: "Danielle",
-    birthday: 558662400000
-  },
-  {
-    name: "Darnell",
-    birthday: 393552000000
+function User(name, birthday) {
+  this.name = name
+  this.birthday = birthday
+  this.getBirthday = function() {
+    return this.birthday
   }
-]
-
-module.exports.getUserBirthDate = function(user) {
-  return user.birthday
 }
+
+module.exports.data = [
+  new User("Ava", 638928000000),
+  new User("James", 476496000000),
+  new User("Danielle", 558662400000),
+  new User("Darnell", 393552000000)
+]
