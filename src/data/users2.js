@@ -1,18 +1,18 @@
 module.exports.data = [
   {
     name: "Ava",
-    dateOfBirth: "1990-04-01"
+    birthday: 638928000000
   },
   {
     name: "James",
-    dateOfBirth: "1985-02-06"
+    birthday: 476496000000
   },
   {
     name: "Danielle",
-    dateOfBirth: "1987-09-15"
+    birthday: 558662400000
   },
   {
     name: "Darnell",
-    dateOfBirth: "1982-06-22"
+    birthday: 393552000000
   }
 ]
