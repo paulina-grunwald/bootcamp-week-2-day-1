@@ -1,5 +1,8 @@
-class User {
+const User = require('./userClass')
+
+class UserWithBirthday extends User {
   constructor(name, birthday) {
+    super()
     this.name = name
     this.dateOfBirth = birthday
   }
@@ -9,8 +12,8 @@ class User {
 }
 
 module.exports.data = [
-  new User("Ava", "1990-04-01"),
-  new User("James", "1985-02-06"),
-  new User("Danielle", "1987-09-15"),
-  new User("Darnell", "1982-06-22")
+  new UserWithBirthday("Ava", "1990-04-01"),
+  new UserWithBirthday("James", "1985-02-06"),
+  new UserWithBirthday("Danielle", "1987-09-15"),
+  new UserWithBirthday("Darnell", "1982-06-22")
 ]

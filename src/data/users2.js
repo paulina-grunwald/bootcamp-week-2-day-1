@@ -1,7 +1,9 @@
-function User(name, birthday) {
-  this.name = name
-  this.birthday = birthday
-  this.getBirthday = function() {
+class User {
+  constructor(name, birthday) {
+    this.name = name
+    this.birthday = birthday
+  }
+  getBirthday() {
     return this.birthday
   }
 }
