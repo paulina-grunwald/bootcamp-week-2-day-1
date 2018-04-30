@@ -1,6 +1,7 @@
 const assert = require("assert")
 const { data: userData } = require("./data/users2")
-const { printAges } = require("./printAges")
+const { printAges, changeCurrentDate } = require("./printAges")
+changeCurrentDate(() => Date.parse("03-01-2018"))
 
 const [ava, james, danielle, darnell] = printAges(userData)
 
