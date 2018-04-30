@@ -1,7 +1,8 @@
 const assert = require("assert")
 const { data: users1 } = require("./data/users")
 const { data: users2 } = require("./data/users2")
-const { printAges } = require("./printAges")
+const { printAges, changeCurrentDate } = require("./printAges")
+changeCurrentDate(() => Date.parse("03-01-2018"))
 
 function check(output) {
   output.forEach(line => {
