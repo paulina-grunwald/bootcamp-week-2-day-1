@@ -1,8 +1,10 @@
-function User(name, birthday) {
-  this.name = name
-  this.birthday = birthday
-  this.getBirthday = function() {
-    return this.birthday
+class User {
+  constructor(name, birthday) {
+    this.name = name
+    this.dateOfBirth = birthday
+  }
+  getBirthday() {
+    return this.dateOfBirth 
   }
 }
 
