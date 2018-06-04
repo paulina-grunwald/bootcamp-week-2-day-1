@@ -17,4 +17,4 @@ module.exports.data = [
   }
 ]
 
-module.exports.getUserBirthDate = function(user) {}
+module.exports.getUserBirthDate = function(user) {return user.birthday}
