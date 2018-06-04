@@ -1,4 +1,7 @@
 module.exports = function(user) {
-    return user.birthday
-
+    if(user.birthday) {
+        return user.birthday
+    } else {
+        return Date.parse(user.dateOfBirth)
+    }
 }
