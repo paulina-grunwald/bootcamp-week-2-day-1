@@ -1,6 +1,6 @@
 function User(name, birthday) {
   this.name = name
-  this.birthday = (Date.parse(birthday))
+  this.birthday = Date.parse(birthday)
   this.getBirthday = function() {
     return this.birthday
   }
