@@ -3,7 +3,7 @@ module.exports.changeCurrentDate = function(newCurrentDate) {
   currentDate = newCurrentDate
 }
 
-module.exports.printAges = function(users, getBirthday) {
+module.exports.printAges = function(users) {
   return users.map(user => {
     const ageDifMs = currentDate() - user.getBirthday()
     const ageDate = new Date(ageDifMs)
