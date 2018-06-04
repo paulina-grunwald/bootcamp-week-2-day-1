@@ -1,3 +1,4 @@
 module.exports = function(user) {
-    // TODO: Implement me
+    return user.birthday
+
 }
